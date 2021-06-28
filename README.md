@@ -11,7 +11,7 @@
 - axios 请求封装
 
 
-css 通用样式
+css 通用样式，参考：[tailwindcss](https://www.tailwindcss.cn/docs/configuration)
 
 - display: block / inline / inline-block / flex / inline-flex / none
 - height
