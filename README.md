@@ -47,3 +47,4 @@ css 通用样式，参考：[tailwindcss](https://www.tailwindcss.cn/docs/config
 - color:
   - txt-color
   - background-color 
+- change xxxx merge conflict test
