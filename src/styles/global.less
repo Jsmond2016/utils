@@ -1,0 +1,164 @@
+@import './variable';
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.aic {
+  align-items: center;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1;
+}
+
+.w24 {
+  width: 24px;
+}
+
+.radius-4 {
+  border-radius: 4px;
+}
+
+.radius-16 {
+  border-radius: 16px;
+}
+
+.radius-24 {
+  border-radius: 24px;
+}
+
+.radius-32 {
+  border-radius: 32px;
+}
+
+.ml80 {
+  margin-left: 80px;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.fix-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.word-break {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.text-delete {
+  text-decoration: line-through;
+}
+
+.txt-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: @bold-font-weight;
+}
+
+/* 字体 20-50 如：fz20,fz22,fz24 */
+.fz(80);
+
+.fz(@n, @i: 20) when (@i =< @n) {
+  .fz@{i} {
+    font-size: @i*1px;
+  }
+
+  .fz(@n, @i + 2);
+}
+
+/* 行高 20-50 如：lh20,lh22,lh24 */
+.lh(80);
+
+.lh(@n, @i: 20) when (@i =< @n) {
+  .lh@{i} {
+    line-height: @i*1px;
+  }
+
+  .lh(@n, @i + 2);
+}
+
+/* 字体粗细 100~900 如：fw400,fw500 */
+.fw(900);
+
+.fw(@n, @i: 100) when (@i =< @n) {
+  .fw@{i} {
+    font-weight: @i;
+  }
+
+  .fw(@n, @i + 100);
+}

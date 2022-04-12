@@ -1,0 +1,50 @@
+// font-size: 12-28, 间隔 2
+  // fz-n
+// padding: 2-100
+  // pd-n: 
+  // pdh-n, pdv-n
+  // pdt-n, pdb-n, pdl-n, pdr-n
+// margin: 2-100
+  // mg-n:
+  // mgh-n, mgv-n
+  // mgt-n, mgb-n, mgl-n, mgr-n
+// width: 2-400
+  // w-n
+// 
+
+// @list: red, white, black, green, yellow, blue, purple, grey, brown, pink, gold, orange;
+ 
+// .generate-columns(length(@list));
+// .generate-columns(@n, @i: 1) when (@i =< @n) {
+//   @v:extract(@list, @i);
+//   .g-@{v} {
+//      color: @v;
+//   }
+//   .generate-columns(@n, (@i + 1));
+// }
+
+// https://jsmond2016.github.io/study-everyday/record-2022/04/0405.html
+.spacing(@style,  @prefix, @count, @end) when (@count <= @end) {
+  @d:(1px * @count);
+
+  .@{prefix}@{count}{
+    @{style}: @d;
+  }
+
+  .spacing(@style,  @prefix, @count + 2, @end);
+}
+
+
+.spacing(margin-left, mgl, 2, 80);
+.spacing(margin-right, mgl,2, 80);
+.spacing(margin-top, mgl, 2, 80);
+.spacing(margin-bottom, mgl, 2, 80);
+
+.spacing(padding-left, pdl, 2, 80);
+.spacing(padding-right, pdl,2, 80);
+.spacing(padding-top, pdl, 2, 80);
+.spacing(padding-bottom, pdl, 2, 80);
+
+.spacing(width, w, 2, 400);
+.spacing(height, h, 2, 400);
+.spacing(font-size, fz, 12, 28);
